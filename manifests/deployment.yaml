@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mia-frontend
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mia-frontend
+  template:
+    metadata:
+      labels:
+        app: mia-frontend
+    spec:
+      containers:
+      - name: network-multitool
+        image: wbitt/network-multitool
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mia-backend
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mia-backend
+  template:
+    metadata:
+      labels:
+        app: mia-backend
+    spec:
+      containers:
+      - name: network-multitool
+        image: wbitt/network-multitool
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mia-cache
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mia-cache
+  template:
+    metadata:
+      labels:
+        app: mia-cache
+    spec:
+      containers:
+      - name: network-multitool
+        image: wbitt/network-multitool
+        ports:
+        - containerPort: 80

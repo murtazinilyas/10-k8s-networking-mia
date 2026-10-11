@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mia-frontend-svc
+  namespace: app
+spec:
+  type: ClusterIP
+  selector:
+    app: mia-frontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mia-backend-svc
+  namespace: app
+spec:
+  type: ClusterIP
+  selector:
+    app: mia-backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mia-cache-svc
+  namespace: app
+spec:
+  type: ClusterIP
+  selector:
+    app: mia-cache
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
