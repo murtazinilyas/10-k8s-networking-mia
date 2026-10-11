@@ -40,7 +40,7 @@ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.33.0
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.33.0/manifests/custom-resources.yaml
 ```
 
-Написал [манифесты](https://github.com/murtazinilyas/07-k8s-helm-mia/blob/main/manifests):
+Написал [манифесты](https://github.com/murtazinilyas/10-k8s-networking-mia/blob/main/manifests):
 
 <details>  
 <summary> namespace.yaml </summary>
@@ -242,4 +242,4 @@ kubectl apply -f .
 
 Проверил доступы к сервисам по условию задания:
 
-![1](https://github.com/murtazinilyas/07-k8s-helm-mia/blob/main/screenshots/1.png)
+![1](https://github.com/murtazinilyas/10-k8s-networking-mia/blob/main/screenshots/1.png)
